@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+./dnet.gaps detector demo cfg/coco.data cfg/yolo.cfg /home/pacific/ussocom/yolo_weights/yolo.weights http://localhost:8080/?action=stream
+
+

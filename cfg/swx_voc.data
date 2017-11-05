@@ -1,0 +1,6 @@
+classes= 1
+train  = /home/pacific/Pictures/training/longgun_list_train.txt
+valid  = /home/pacific/Pictures/training/longgun_list_test.txt
+names  = /home/pacific/dev/darknet-gaps-train/data/swx.names
+backup = backup
+

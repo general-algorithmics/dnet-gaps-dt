@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo 'make clean-cpp ...'
+make -f Makefile.50 clean-cpp
+echo --------------------
+echo
+
+
+echo 'make dnet.gaps.dt ...'
+make -f Makefile.50 dnet.gaps.dt
+echo --------------------
+echo done
+
+

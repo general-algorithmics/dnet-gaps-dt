@@ -1,0 +1,6 @@
+classes= 1
+train  = /home/pacific/training/yolo_training/ammo.v01/ALL_list_train.txt
+valid  = /home/pacific/training/yolo_training/ammo.v01/ALL_list_test.txt
+names  = /home/pacific/dev/darknet-gaps/data/tankammo.names
+backup = backup
+
