@@ -2,6 +2,7 @@
 
 # Darknet-cpp
 
+This is enhanced version with higher perceived frame rate on under-powered machines.
 Darknet-cpp project is a bug-fixed and C++ compilable version of darknet, an open source neural network framework written in C and CUDA. Darknet-cpp builds on Linux, Windows and also tested on Mac by users.
 
 **Features**
