@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./dnet.gaps.dt detect ./cfg/swx-yolo-voc.2.0-less-memory.cfg  ~/dev/darknet/models/bucks_001/swx-yolo-voc_4000.weights ~/Pictures/train/bucks/100_MEDIA/WGI_0098.JPG -data ./cfg/swx_buck.data
+
+
