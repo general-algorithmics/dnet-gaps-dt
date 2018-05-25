@@ -12,6 +12,10 @@
 #include <sys/time.h>
 #endif
 
+
+#define WINDOW_TITLE  "General Algorithmics Demo"
+
+
 #define FRAMES 3
 
 #ifdef OPENCV
@@ -87,7 +91,7 @@ void* detect_in_thread( void* ptr )
   }
   printf("\033[2J");
   printf("\033[1;1H");
-  printf("\n=== SWX Demo ===");
+  printf("\n=== General Algorithmics Demo ===");
   printf("\nFPS:%.1f\n",fps);
   printf("Objects:\n\n");
 
@@ -286,7 +290,7 @@ demo(
     demo_classes  = classes;
     demo_thresh   = thresh;
     demo_hier_thresh = hier_thresh;
-    printf( "SWX Demo\n" );
+    printf( "General Algorithmics Demo\n" );
     net = parse_network_cfg( cfgfile );
     if ( weightfile )
     {
@@ -369,11 +373,11 @@ demo(
 
     if ( !prefix )
     {
-      cvNamedWindow( "SWX Demo", CV_WINDOW_NORMAL );
+      cvNamedWindow( WINDOW_TITLE, CV_WINDOW_NORMAL );
       //cvSetWindowProperty(
-      //  "SWX Demo", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
-      cvMoveWindow( "SWX Demo", 0, 0 );
-      cvResizeWindow( "SWX Demo", 640, 480 );
+      //  WINDOW_TITLE, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+      cvMoveWindow( WINDOW_TITLE, 0, 0 );
+      cvResizeWindow( WINDOW_TITLE, 800, 600 );
     }
 
     double before = get_wall_time();
@@ -400,7 +404,7 @@ demo(
           }
 
           disp = det;
-          show_image( disp, "SWX Demo" );
+          show_image( disp, WINDOW_TITLE );
           free_image( disp );
 
           int c = cvWaitKey( 1 );
@@ -472,7 +476,7 @@ demo_yurl(
     demo_classes     = classes;
     demo_thresh      = thresh;
     demo_hier_thresh = hier_thresh;
-    printf("SWX Demo\n");
+    printf("General Algorithmics Demo\n");
     net = parse_network_cfg(cfgfile);
     if(weightfile){
         load_weights(&net, weightfile);
@@ -536,9 +540,9 @@ demo_yurl(
 
     int count = 0;
     if(!prefix){
-        cvNamedWindow("SWX Demo", CV_WINDOW_NORMAL); 
-        cvMoveWindow("SWX Demo", 0, 0);
-        cvResizeWindow("SWX Demo", 990, 740);
+        cvNamedWindow(WINDOW_TITLE, CV_WINDOW_NORMAL); 
+        cvMoveWindow(WINDOW_TITLE, 0, 0);
+        cvResizeWindow(WINDOW_TITLE, 990, 740);
     }
 
     double before = get_wall_time();
@@ -558,7 +562,7 @@ demo_yurl(
                 if(vwtr){
                   save_image_to_video_cv(disp, vwtr);
                 }
-                show_image(disp, "SWX Demo");
+                show_image(disp, WINDOW_TITLE);
                 int c = cvWaitKey(1);
                 if (c == 10){
                     if(frame_skip == 0) frame_skip = 60;
@@ -590,7 +594,7 @@ demo_yurl(
                 free_image(disp);
                 disp = det;
             }
-            show_image(disp, "SWX Demo");
+            show_image(disp, WINDOW_TITLE);
             cvWaitKey(1);
         }
         --delay;
